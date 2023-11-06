@@ -18,6 +18,7 @@ class Deque:
         self.count += 1
 
     def appendleft(self, x):
+        """Add an element to the front of the Deque."""
         if self.count == self.size:
             raise IndexError("Deque is full")
         self.front = (self.front - 1) % self.size
@@ -25,6 +26,7 @@ class Deque:
         self.count += 1
 
     def pop(self):
+        """Remove and return an element from the rear of the Deque."""
         if self.count == 0:
             raise IndexError("Deque is empty")
         self.rear = (self.rear - 1) % self.size
@@ -34,6 +36,7 @@ class Deque:
         return value
 
     def popleft(self):
+        """Remove and return an element from the front of the Deque."""
         if self.count == 0:
             raise IndexError("Deque is empty")
         value = self.buffer[self.front]
@@ -43,11 +46,13 @@ class Deque:
         return value
 
     def peek(self):
+        """Return the element from the rear of the Deque without removing it."""
         if self.count == 0:
             raise IndexError("Deque is empty")
         return self.buffer[(self.rear - 1) % self.size]
 
     def peekleft(self):
+        """Return the element from the front of the Deque without removing it."""
         if self.count == 0:
             raise IndexError("Deque is empty")
         return self.buffer[self.front]

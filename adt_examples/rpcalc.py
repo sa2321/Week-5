@@ -4,6 +4,7 @@ import math
 
 class RPCalc:
     """A simple Reverse Polish Notation (RPN) calculator."""
+    
     def __init__(self):
         """Initialize the RPN calculator with an empty stack."""
         self.stack = []

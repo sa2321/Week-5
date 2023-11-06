@@ -2,7 +2,7 @@ class Fib:
     def __init__(self):
         self.prev = 1
         self.current = 2
-
+        
     def __iter__(self):
         return self
 

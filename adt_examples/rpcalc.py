@@ -1,14 +1,15 @@
-""""""
+"""A simple Reverse Polish Notation (RPN) calculator."""
 
 import math
 
 class RPCalc:
+    """A simple Reverse Polish Notation (RPN) calculator."""
     def __init__(self):
-        """"""
+        """Initialize the RPN calculator with an empty stack."""
         self.stack = []
 
     def push(self, n):
-        """"""
+        """Push a number or operator onto the stack for calculation.""""
         if isinstance(n, (int, float)):
             self.stack.append(n)
         elif n in ["+", "-", "*", "/", "sin", "cos"]:
@@ -44,17 +45,17 @@ class RPCalc:
             raise ValueError(f"Unrecognized operator: {n}")
 
     def pop(self):
-        """"""
+        """Pop and return the top value from the stack."""
         if not self.stack:
             raise ValueError("Empty stack")
         return self.stack.pop()
 
     def peek(self):
-        """"""
+        """Peek at the top value on the stack without removing it."""
         if not self.stack:
             raise ValueError("Empty stack")
         return self.stack[-1]
 
     def __len__(self):
-        """"""
+        """Return the number of elements currently on the stack."""
         return len(self.stack)

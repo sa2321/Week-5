@@ -1,4 +1,3 @@
-
 class Fib:
     def __init__(self):
         self.prev = 0

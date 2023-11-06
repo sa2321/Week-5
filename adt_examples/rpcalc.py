@@ -10,7 +10,6 @@ class RPCalc:
         self.stack = []
 
     def push(self, n):
-        """Push a number or operator onto the stack for calculation.""""
         if isinstance(n, (int, float)):
             self.stack.append(n)
         elif n in ["+", "-", "*", "/", "sin", "cos"]:

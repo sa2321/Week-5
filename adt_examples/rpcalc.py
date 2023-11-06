@@ -2,6 +2,7 @@
 
 import math
 
+
 class RPCalc:
     """A simple Reverse Polish Notation (RPN) calculator."""
 

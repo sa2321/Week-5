@@ -1,12 +1,15 @@
+
 class Fib:
     def __init__(self):
-        self.a = 0
-        self.b = 1
+        self.prev = 0
+        self.current = 1
 
     def __iter__(self):
         return self
 
     def __next__(self):
-        result = self.a
-        self.a, self.b = self.b, self.a + self.b
+        if self.prev > 100:
+            raise StopIteration
+        result = self.prev
+        self.prev, self.current = self.current, self.prev + self.current
         return result

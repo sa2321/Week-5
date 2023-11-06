@@ -1,5 +1,8 @@
+"""This module defines a Deque (double-ended queue) data structure."""
+
 class Deque:
     def __init__(self, size):
+            """A class for implementing a Deque data structure."""
         self.size = size
         self.buffer = [None] * size
         self.front = 0
@@ -7,6 +10,7 @@ class Deque:
         self.count = 0
 
     def append(self, x):
+        """Add an element to the rear of the Deque."""
         if self.count == self.size:
             raise IndexError("Deque is full")
         self.buffer[self.rear] = x
@@ -49,9 +53,11 @@ class Deque:
         return self.buffer[self.front]
 
     def __len__(self):
+        """Return the current number of elements in the Deque."""
         return self.count
 
     def __iter__(self):
+        """Iterate through the elements of the Deque."""
         current = self.front
         for _ in range(self.count):
             yield self.buffer[current]

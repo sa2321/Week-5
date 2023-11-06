@@ -4,12 +4,13 @@ import math
 
 class RPCalc:
     """A simple Reverse Polish Notation (RPN) calculator."""
-    
+
     def __init__(self):
         """Initialize the RPN calculator with an empty stack."""
         self.stack = []
 
     def push(self, n):
+        """Push itself by appending array."""
         if isinstance(n, (int, float)):
             self.stack.append(n)
         elif n in ["+", "-", "*", "/", "sin", "cos"]:

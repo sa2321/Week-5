@@ -1,8 +1,10 @@
-"""This module defines a Deque (double-ended queue) data structure."""
+"""A module defining a Deque (double-ended queue) data structure."""
 
 class Deque:
+    """A class for implementing a Deque data structure."""
+
     def __init__(self, size):
-        """A class for implementing a Deque data structure."""
+        """Initialize class for implementing a Deque data structure."""
         self.size = size
         self.buffer = [None] * size
         self.front = 0
@@ -46,13 +48,13 @@ class Deque:
         return value
 
     def peek(self):
-        """Return the element from the rear of the Deque without removing it."""
+        """Return the element from the rear of the Deque."""
         if self.count == 0:
             raise IndexError("Deque is empty")
         return self.buffer[(self.rear - 1) % self.size]
 
     def peekleft(self):
-        """Return the element from the front of the Deque without removing it."""
+        """Return the element from the front of the Deque."""
         if self.count == 0:
             raise IndexError("Deque is empty")
         return self.buffer[self.front]

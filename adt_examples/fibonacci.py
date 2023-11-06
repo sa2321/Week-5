@@ -1,5 +1,6 @@
 """A module defines a Fibonacci number generator."""
 
+
 class Fib:
     """A class for generating Fibonacci numbers using an iterator."""
 

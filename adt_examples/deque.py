@@ -2,7 +2,7 @@
 
 class Deque:
     def __init__(self, size):
-            """A class for implementing a Deque data structure."""
+        """A class for implementing a Deque data structure."""
         self.size = size
         self.buffer = [None] * size
         self.front = 0

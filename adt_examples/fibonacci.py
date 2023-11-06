@@ -4,7 +4,7 @@ class Fib:
     """A class for generating Fibonacci numbers using an iterator."""
 
     def __init__(self):
-    """Define the first two terms of the the sequence."""
+        """Write in the first two terms of the the sequence."""
         self.prev = 1
         self.current = 2
 

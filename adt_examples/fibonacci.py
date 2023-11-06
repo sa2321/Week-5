@@ -1,7 +1,7 @@
 class Fib:
     def __init__(self):
-        self.prev = 0
-        self.current = 1
+        self.prev = 1
+        self.current = 2
 
     def __iter__(self):
         return self

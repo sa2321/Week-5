@@ -1,5 +1,6 @@
 """A module defining a Deque (double-ended queue) data structure."""
 
+
 class Deque:
     """A class for implementing a Deque data structure."""
 

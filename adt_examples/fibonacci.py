@@ -7,9 +7,11 @@ class Fib:
         self.current = 2
 
     def __iter__(self):
+        """Return the iterator object."""
         return self
 
     def __next__(self):
+        """Generate the next Fibonacci number."""
         if self.prev > 10000:
             raise StopIteration
         result = self.prev

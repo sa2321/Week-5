@@ -1,10 +1,14 @@
+""""""
+
 import math
 
 class RPCalc:
     def __init__(self):
+        """"""
         self.stack = []
 
     def push(self, n):
+        """"""
         if isinstance(n, (int, float)):
             self.stack.append(n)
         elif n in ["+", "-", "*", "/", "sin", "cos"]:
@@ -40,15 +44,17 @@ class RPCalc:
             raise ValueError(f"Unrecognized operator: {n}")
 
     def pop(self):
+        """"""
         if not self.stack:
             raise ValueError("Empty stack")
         return self.stack.pop()
 
     def peek(self):
+        """"""
         if not self.stack:
             raise ValueError("Empty stack")
         return self.stack[-1]
 
     def __len__(self):
+        """"""
         return len(self.stack)
-

@@ -10,6 +10,7 @@ class RPCalc:
         self.stack = []
 
     def push(self, n):
+        """Push itself by appending array."""
         if isinstance(n, (int, float)):
             self.stack.append(n)
         elif n in ["+", "-", "*", "/", "sin", "cos"]:

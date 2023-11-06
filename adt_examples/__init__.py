@@ -1,1 +1,1 @@
-git rm unwanted-file.py
+git rm __init__.py

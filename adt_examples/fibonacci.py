@@ -1,8 +1,11 @@
+"""This module defines a Fibonacci number generator."""
+
 class Fib:
+    """A class for generating Fibonacci numbers using an iterator."""
     def __init__(self):
         self.prev = 1
         self.current = 2
-        
+
     def __iter__(self):
         return self
 
